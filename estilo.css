@@ -1,0 +1,211 @@
+/* Resetando para começar com a configuração zerada */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Declarando variável de cores para usar em toda as páginas */
+:root {
+    --cor01: #ffffff;
+    --cor02: #38363b;
+    --cor03: #00c9a4;
+}
+
+/* Usando media queries para dispositivos de telas menores */
+@media (max-width: 768px) {
+    .container-menu ul {
+        flex-direction: column; /* Empilha os itens verticalmente */
+    }
+
+    .container-menu ul li a {
+        padding: 10px; /* Aumenta o padding para tornar os itens mais fáceis de clicar */
+    }
+
+    .content{
+        margin: 20px;
+    }
+
+    .content {
+        flex-direction: column; 
+        align-items: center; /* Centraliza o conteúdo */
+        text-align: center; /* Centraliza o texto */
+        padding-bottom: 50px;
+    }
+
+    .container img {
+        max-width: 200px;/* Reduz a largura máxima da imagem */
+        margin-bottom: 20px;/* Adiciona margem abaixo da imagem para espaçamento */
+    }
+
+    .text-content {
+        flex: 1; /* Ajusta o texto para ocupar 100% da largura disponível */
+    }
+
+}
+
+
+/* Estilo geral para a página */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/* Definindo a fonte do site*/
+    display: flex;/* Usando flexbox*/
+    flex-direction: column; /*Deixando o conteúdo em coluna*/
+}
+
+h1 {
+    font-size: 24px;/*Define tamanho da fonte*/
+    padding-bottom: 100px;
+    color: var(--cor02);/*Usando as variáveis de cores*/
+    margin: 20px;
+}
+
+p {
+    font-size: 16px;
+
+}
+
+a {
+    text-decoration: none;/*Retirando o sublinhado dos links*/
+}
+
+a:hover {
+    color: var(--cor03);/*Usando as variáveis de cores*/
+}
+
+
+/* Container do menu */
+.container-menu {
+    background-color: var(--cor02);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo da lista do menu */
+.container-menu ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0;
+}
+
+.container-menu ul li a {
+    color: var(--cor01);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.container-menu ul li a:hover {
+    color: var(--cor03);
+}
+
+/* Container da seção "Sobre" */
+.container {
+    flex: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.content img {
+    width: 100%;
+    max-width: 300px;    
+    border-radius: 50%; /* Torna a imagem redonda */
+}
+
+
+
+.text-content {
+    flex: 2;
+    text-align: justify;
+    margin: 0; /* Remove a margem */
+}
+
+
+/*Formacao*/
+.container-formacao {
+    display: flex;
+    flex-direction: column; 
+    max-width: 1000px; /* Limita a largura máxima */
+    margin: 0 auto;
+    margin-top: 80px;
+    padding:20px;
+    text-align: center; 
+   
+}
+
+
+/* Código do Formulário */
+.container-contato {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para o container do formulário */
+.container-form {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos do formulário em uma coluna */
+    width: 100%; /* Faz o container ocupar 100% da largura disponível */
+    max-width: 600px; /* Define uma largura máxima para o formulário */
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+/* Estilo para os campos do formulário */
+.container-form input,
+.container-form textarea {
+    width: 100%; 
+    padding: 10px;  /* Adiciona espaço interno aos campos */
+    margin-top: 5px; /* Adiciona espaço superior aos campos */
+    margin-bottom: 15px; /* Adiciona espaço inferior aos campos */
+    border: 1px solid var(--cor02); /* Adiciona uma borda cinza clara */
+    border-radius: 5px;/* Arredonda os cantos dos campos */
+}
+
+/* Estilo para o botão de envio */
+.container-form button {
+    width: 100px;
+    padding: 10px;
+    background-color: var(--cor02); /* Define a cor de fundo do botão */
+    color: var(--cor01);    
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse sobre o botão */
+    align-self: flex-start; /* Alinha o botão ao início do container */
+    margin-top: 15px; 
+}
+
+/* Define o comportamento do botão ao passar o mouse por cima */
+.container-form button:hover {
+    background-color: var(--cor03); 
+}
+
+
+/* Footer */
+.container-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor02);
+    text-align: center;
+    padding: 10px 0; /* Espaçamento interno */
+}
+
+.container-footer p {
+    margin: 0;
+    font-size: 16px;/* Tamanho da fonte */
+    color: var(--cor01)/* Cor do texto */
+}
