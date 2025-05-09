@@ -1,0 +1,180 @@
+/* Resetando para começar com a configuração zerada */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor05);
+
+}
+
+/* Declarando variável de cores para usar em toda as páginas */
+:root {
+    --cor01: #ffffff;
+    --cor02: #313030;
+    --cor05: #141415;
+    --cor03: #00b490;
+}
+
+/* Usando media queries para dispositivos de telas menores */
+@media (max-width: 768px) {
+    .container-menu ul {
+        flex-direction: column;
+    }
+
+    .container-menu ul li a {
+        padding: 10px;
+    }
+
+    .content {
+        margin: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .container img {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        flex: 1;
+    }
+
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Definindo a fonte do site */
+    color: var(--cor03);
+    display: flex;
+    /* Usando flexbox */
+    flex-direction: column;
+
+}
+
+h1 {
+    font-size: 30px;
+    padding-bottom: 100px;
+    color: var(--cor01);
+    margin: 0px;
+}
+
+p {
+    font-size: 16px;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor03);
+}
+
+a:hover {
+    color: var(--cor01);
+}
+
+
+/* Container do menu */
+.container-menu {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--cor02);
+}
+
+/* Estilo da lista do menu */
+.container-menu ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0;
+    background-color: var(--cor02);
+
+}
+
+.container-menu ul li a {
+    color: var(--cor03);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: var(--cor02);
+
+}
+
+.container-menu ul li a:hover {
+    color: var(--cor01);
+}
+
+/* Container da seção "Sobre" */
+.container {
+    flex: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding-bottom: 50px;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 50%;
+    /* Torna a imagem redonda */
+}
+
+
+
+.text-content {
+    flex: 2;
+    text-align: justify;
+    margin: 0;
+    /* Remove a margem */
+
+}
+
+
+/*Formacao*/
+.container-formacao {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+
+
+}
+
+/* Footer */
+.container-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--cor02);
+
+}
+
+.container-footer p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--cor01);
+    background-color: var(--cor02);
+
+
+
+}
